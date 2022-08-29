@@ -1,0 +1,42 @@
+{
+  "name": "Word PWA",
+  "short_name": "Word",
+  "descriptions": "View Docx File",
+  "start_url": "./",
+  "background_color": "#323639",
+  "display": "standalone",
+  "theme_color": "#185ABD",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "type": "image/png"
+    }
+  ],
+  "display_override": ["window-controls-overlay"],
+  
+  "shortcuts" : [
+    {
+      "name": "Open Documents",
+      "url": "./#OD",
+      "description": "Start This App And Open A Document",
+      "icons": [{ "src": "./icon.png", "sizes": "256x256" }]
+    },
+    {
+      "name": "Open In Browser",
+      "url": "./#OIB",
+      "description": "Start This Tool In Your Browser Tab",
+      "icons": [{ "src": "./icon.png", "sizes": "256x256" }]
+    }
+  ],
+  
+  "file_handlers": [
+    {
+      "action": "./",
+      "accept": {
+        "text/*": [
+          ".docx"
+        ]
+      }
+    }
+  ]
+}

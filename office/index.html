@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head translate="no">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<link href="./icon.png" rel="shortcut icon">
+		<link href="./manifest.json" rel="manifest">
+		<link href="./style.css" rel="stylesheet">
+		<link href="./icon.png" rel="icon">
+		
+		<script src="./office.cfg"></script>
+		
+		<title>Office</title>
+	</head>
+	<body>
+		<!--Word Logo-->
+		<img src="./icon.png" title="Office" class="TitleBarIcon">
+		
+		<!--Title Bar-->
+		<table class="TitleBar"><tbody><tr>
+			<td width="35px"></td>
+			<td align="left"><label translate="no">Office</label></td>
+		</tr></tbody></table>
+		
+		<!--More Menu-->
+		
+		<div class="TitleBarMenuBody" style="display:none;" id="TBMB" onclick="location.href=ProjectWebsite">View this project in Github</div>
+		<script>
+		var TBMB = document.getElementById("TBMB");
+		function TBMBon(ele) {
+			TBMB.style.display="block";
+			ele.setAttribute("onclick", "TBMBoff(this)");
+		}
+		function TBMBoff(ele) {
+			TBMB.style.display="none";
+			ele.setAttribute("onclick", "TBMBon(this)");
+		}
+		</script>
+		<input type="button" value="· · ·" onclick="TBMBon(this)" class="TitleBarMenuBtn">
+		
+		<!--列表显示容器-->
+		<center>
+			<div id="container" translate="no">
+				<h1 style="color:#FFF;">&nbsp;My Office</h1>
+			</div>
+		</center>
+		
+		<script type="text/javascript" src="./scripts.js"></script>
+</body></html>

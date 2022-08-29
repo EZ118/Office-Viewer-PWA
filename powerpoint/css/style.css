@@ -1,0 +1,178 @@
+body{background-color: rgb(50, 54, 57); margin: 0; padding: 0; }
+
+.TitleBar{ position:fixed; top:0px; left:0px; z-index:19997; width:100%; height:40px; padding:5px; 
+	background:#c43e1c; color:#FFF; box-shadow:0px 1px 5px #000; user-select:none;}
+
+.TitleBarIcon{ position:fixed; left:5px; top:5px; width:30px; z-index:19998; user-select:none; }
+
+#OneDrag{ position:fixed; top:0px; left:0px; z-index:19999; width:100%; height:40px; }
+
+#InstallBtn{ position:fixed; bottom:10px; right:10px; z-index:15; 
+	border:2px solid #FFF; border-radius:25px; height:30px; padding:3px; background:#000; color:#FFF;}
+#InstallBtn:hover, #InstallBtn:active { background:#505050; }
+
+#container{	margin-bottom:20px; margin-top:50px;	
+	border:none; text-align:left; width:fit-content; min-height:500px; }
+
+
+/*===============*/
+
+.slide {
+	position: relative;
+	border: 0px solid #CCC;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 7px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.slide div.block {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	line-height: 1;
+}
+
+.slide div.content {
+	display: flex;
+	flex-direction: column;
+}
+.slide div.diagram-content{
+	display: flex;
+	flex-direction: column;
+}
+
+.slide div.content-rtl {
+	display: flex;
+	flex-direction: column;
+	direction: rtl; 
+}
+.slide .pregraph-rtl{
+	direction: rtl; 
+}
+.slide .pregraph-ltr{
+	direction: ltr; 
+}
+.slide .pregraph-inherit{
+	direction: inherit; 
+}
+.slide .slide-prgrph{
+	width: 100%;
+	/* overflow-wrap:break-word;
+  	word-wrap: break-word;  */
+  
+	/* word-break: break-word; */
+	/* unicode-bidi: bidi-override; */
+	/* hyphens: auto;
+	overflow-wrap: break-word; */
+	
+}
+
+.slide .line-break-br::before{
+  content: "\A";
+  white-space: pre;
+}
+.slide div.v-up {
+	justify-content: flex-start;
+}
+.slide div.v-mid {
+	justify-content: center;
+}
+.slide div.v-down {
+	justify-content: flex-end;
+}
+
+.slide div.h-left {
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+}
+.slide div.h-left-rtl {
+	justify-content: flex-end;
+	align-items: flex-end;
+	text-align: left;
+}
+.slide div.h-mid {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.slide div.h-right {
+	justify-content: flex-end;
+	align-items: flex-end;
+	text-align: right;
+}
+.slide div.h-right-rtl {
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: right;
+}
+
+.slide div.h-just,
+.slide div.h-dist {
+	text-align: justify;
+}
+
+
+.slide div.up-left {
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+}
+.slide div.up-center {
+	justify-content: flex-start;
+	align-items: center;
+}
+.slide div.up-right {
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+.slide div.center-left {
+	justify-content: center;
+	align-items: flex-start;
+	text-align: left;
+}
+.slide div.center-center {
+	justify-content: center;
+	align-items: center;
+}
+.slide div.center-right {
+	justify-content: center;
+	align-items: flex-end;
+}
+.slide div.down-left {
+	justify-content: flex-end;
+	align-items: flex-start;
+	text-align: left;
+}
+.slide div.down-center {
+	justify-content: flex-end;
+	align-items: center;
+}
+.slide div.down-right {
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+
+.slide li.slide {
+	margin: 10px 0px;
+	font-size: 18px;
+}
+
+.slide table {
+	position: absolute;
+}
+
+.slide svg.drawing {
+	position: absolute;
+	overflow: visible;
+}
+/*
+#pptx-thumb {
+	min-width: 240px;
+	height: 180px;
+}
+*/

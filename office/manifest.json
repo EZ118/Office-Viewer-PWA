@@ -1,0 +1,31 @@
+{
+  "name": "Office PWA",
+  "short_name": "Office",
+  "descriptions": "Office Center",
+  "start_url": "./",
+  "background_color": "#323639",
+  "display": "standalone",
+  "theme_color": "#f4e1e1",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "type": "image/png"
+    }
+  ],
+  "display_override": ["window-controls-overlay"],
+  
+  "shortcuts" : [
+    {
+      "name": "All In One Mode",
+      "url": "./#AIOM",
+      "description": "Start All Office App In Single Window",
+      "icons": [{ "src": "./icon.png", "sizes": "256x256" }]
+    },
+    {
+      "name": "Open In Browser",
+      "url": "./#OIB",
+      "description": "Start This Tool In Your Browser Tab",
+      "icons": [{ "src": "./icon.png", "sizes": "256x256" }]
+    }
+  ]
+}

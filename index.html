@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html translate="no"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<link href="./icon.png" rel="shortcut icon">
+		<link href="./icon.png" rel="icon">
+		
+		<title>Redirrecting ...</title>
+		<script src="./office.cfg"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function UrlData(i){
+				let a = window.location.href + "#";
+				a = a.split("#")[i];
+				if(a == "") return null;
+				else return a;
+			}
+			if(UrlData(1) == "redirect" && UrlData(2) != null) {
+				top.location.href = decodeURIComponent(UrlData(2));
+			} else {
+				top.location.href = DefaultPage;
+			}
+		</script>
+</body></html>

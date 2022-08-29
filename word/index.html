@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head translate="no">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<link href="./icon.png" rel="shortcut icon">
+		<link href="./manifest.json" rel="manifest">
+		<link href="./style.css" rel="stylesheet">
+		<link href="./icon.png" rel="icon">
+		
+		<script src="./docx2html.min.js"></script>
+		
+		<title>Docx Viewer</title>
+	</head>
+	<body>
+		<!--Word Logo-->
+		<img src="./icon.png" title="Word" class="TitleBarIcon">
+		
+		<!--Title Bar-->
+		<table class="TitleBar"><tbody><tr>
+			<td width="35px"></td>
+			<td align="left"><label translate="no">Word</label></td>
+			<td align="right">
+				<label style="color:rgba(200, 200, 200, 0.3); font-size:13px;">
+					Drop Or Click To Open
+				</label>
+			</td>
+			<td align="right"  translate="no" style="display:none;">
+				<!--<input type="button" value="   Install   " id="InstallBtn">-->
+				<input type="hidden" value="   Install   " id="InstallBtn" style="display:none;">
+			</td>
+		</tr></tbody></table>
+		
+		<!--文件拖拽框-->
+		<input type="file" style="display:none;" id="SelectFileBtn" onchange="docx2h5(this)"/>
+		<div id="OneDrag" onclick="document.getElementById('SelectFileBtn').click()"></div>
+		
+		<center>
+			<div id="container" style="display:none;"></div><!--文档显示容器-->
+		</center>
+		
+		<script type="text/javascript" src="./scripts.js"></script>
+</body></html>
