@@ -26,19 +26,35 @@
 					Drop Or Click To Open
 				</label>
 			</td>
-			<td align="right" translate="no" style="display:none;">
-				<!--<input type="button" value="   Install   " id="InstallBtn">-->
-				<input type="hidden" value="   Install   " id="InstallBtn" style="display:none;">
+			<td align="right" width="45px">
 			</td>
 		</tr></tbody></table>
+		
+		<!--More Menu-->
+		<div class="TitleBarMenuBody" style="display:none;" id="TBMB">
+			<div onclick="doPrint();">&nbsp;Print&nbsp;This&nbsp;Document&nbsp;</div><hr>
+			<div onclick="closeWin();">&nbsp;Close</div>
+		</div>
+		<script>
+		var TBMB = document.getElementById("TBMB");
+		function TBMBon(ele) {
+			TBMB.style.display="block";
+			ele.setAttribute("onclick", "TBMBoff(this)");
+		}
+		function TBMBoff(ele) {
+			TBMB.style.display="none";
+			ele.setAttribute("onclick", "TBMBon(this)");
+		}
+		</script>
+		<input type="button" value="· · ·" onclick="TBMBon(this)" class="TitleBarMenuBtn">
 		
 		<!--文件拖拽框-->
 		<input type="file" style="display:none;" id="SelectFileBtn" accept=".xlsx,.xls"/>
 		<div id="OneDrag" onclick="document.getElementById('SelectFileBtn').click()"></div>
 		
-		<center>
-			<div id="container"></div><!--文档显示容器-->
-		</center>
+		<!--文档显示容器-->
+		<div style="height:50px;"></div>
+		<!--start--><div id="container"></div><!--end-->
 		
 		<script type="text/javascript" src="./scripts.js"></script>
 </body></html>

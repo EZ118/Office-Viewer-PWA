@@ -87,37 +87,20 @@ window.onload = function() {
 
 
 /*
- *  PWA StandAlone Settings:
- *   - Empty title
- *   - User Installation
+ *  Print&Close
  */
-var dfdPrompt = null;
-var IstBtn = document.getElementById("InstallBtn");
 
-window.addEventListener('beforeinstallprompt', function (e) {
-    // 存储事件
-    dfdPrompt = e;
-    // 显示按钮
-    IstBtn.style.display = 'block';
-    // 阻止默认事件
-    e.preventDefault();
-    return false;
-});
- 
-IstBtn.addEventListener('click', function (e) {
-    if (dfdPrompt == null) {
-        return;
-    }
-    // 通过按钮点击事件触发横幅显示
-    dfdPrompt.prompt();
-    // 监控用户的安装行为
-    dfdPrompt.userChoice.then(function (choiceResult) {
-        //alert(choiceResult.outcome);
-    });
-    // 隐藏按钮
-    button.style.display = 'none';
-    dfdPrompt = null;
-});
+function closeWin() { window.opener=null;window.close(); }
+function doPrint() {
+	var bdhtml = window.document.body.innerHTML;
+	var startStr = '<!--start-->';
+	var endStr = '<!--end-->';
+	var printHtml = bdhtml.substring(bdhtml.indexOf(startStr) + startStr.length, bdhtml.indexOf(endStr));
+	
+	window.document.body.innerHTML = printHtml;
+	window.print();
+	window.document.body.innerHTML = bdhtml;
+}
 
 
 /*
