@@ -114,6 +114,9 @@ window.onload = function() {
  */
 function closeWin() { window.opener=null;window.close(); }
 function doPrint() {
+	document.getElementById("TBMB").style.display="none";
+	document.getElementById("TBMBonBtn").setAttribute("onclick", "TBMBon(this)");
+	
 	var bdhtml = window.document.body.innerHTML;
 	var startStr = '<!--start-->';
 	var endStr = '<!--end-->';

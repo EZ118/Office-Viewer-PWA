@@ -10,18 +10,18 @@ body{
 /*更多按钮*/
 .TitleBarMenuBtn{
 	position:fixed; right:0px; top:0px; z-index:12;
-	width:40px; height:40px; border:2px solid rgba(200, 200, 200, 0.3);
-	background:#107c41; color:#a3b9ad;
+	width:40px; height:40px; border:2px solid #107c41;
+	background:#107c41; color:rgba(200, 200, 200, 0.8);
 }
 .TitleBarMenuBtn:hover,
 .TitleBarMenuBtn:active{
 	background:#479369;
-	border:2px solid #6aa785;
+	border:2px solid rgba(200, 200, 200, 0.3);
 }
 .TitleBarMenuBody{
 	position:fixed; right:4px; top:45px; z-index:12;
-	background:#479369; padding:10px;
-	border:2px solid #6aa785; border-radius:5px;
+	background:#107c41; padding:10px;
+	border:2px solid rgba(200, 200, 200, 0.3); border-radius:5px;
 }
 .TitleBarMenuBody div{ width:100%; color:#FFF; }
 

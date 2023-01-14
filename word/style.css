@@ -17,17 +17,17 @@ body{
 .TitleBarMenuBtn{
 	position:fixed; right:0px; top:0px; z-index:12;
 	width:40px; height:40px; color:rgba(200, 200, 200, 0.8);
-	background:#185ABD; border:2px solid rgba(200, 200, 200, 0.3);
+	background:#185ABD; border:2px solid #185ABD;
 }
 .TitleBarMenuBtn:hover,
 .TitleBarMenuBtn:active{
 	background:#4d7bc0;
-	border:2px solid #8aa1c4;
+	border:2px solid rgba(200, 200, 200, 0.3);
 }
 .TitleBarMenuBody{
 	position:fixed; right:4px; top:45px; z-index:12;
-	background:#4d7bc0; padding:10px;
-	border:2px solid #8aa1c4; border-radius:5px;
+	background:#185ABD; padding:10px;
+	border:2px solid rgba(200, 200, 200, 0.3); border-radius:5px;
 }
 .TitleBarMenuBody div{ width:100%; color:#FFF; }
 

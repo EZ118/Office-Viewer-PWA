@@ -10,21 +10,16 @@
 		
 		<script src="./docx2html.min.js"></script>
 		
-		<title>Docx Viewer</title>
+		<title>To Do</title>
 	</head>
 	<body>
 		<!--Word Logo-->
-		<img src="./icon.png" title="Word" class="TitleBarIcon">
+		<img src="./icon.png" title="To Do" class="TitleBarIcon">
 		
 		<!--Title Bar-->
 		<table class="TitleBar"><tbody><tr>
 			<td width="35px"></td>
-			<td align="left"><label translate="no">Word</label></td>
-			<td align="right">
-				<label style="color:rgba(200, 200, 200, 0.3); font-size:13px;">
-					Drop Or Click To Open
-				</label>
-			</td>
+			<td align="left"><label translate="no">To Do</label></td>
 			<td align="right" width="45px">
 			</td>
 		</tr></tbody></table>
@@ -56,6 +51,20 @@
 		<!--文档显示容器-->
 		<div style="height:50px;"></div>
 		<!--start--><div id="container" style="display:none;"></div><!--end-->
+		<!--ToDo列表菜單-->
+		<div class="ListOList-l" id="container_l"> <br>
+			<div class="LOLItem i-selected" id="DefaultItem">
+				<span>☀</span>
+				&nbsp;
+				<span>Today</span>
+			</div>
+			<div class="LOLItem">
+				<span>★</span>
+				&nbsp;
+				<span>All</span>
+			</div>
+		</div>
+		<div class="ListOList-r" id="container_r"></div>
 		
 		<!--所有脚本-->
 		<script type="text/javascript" src="./scripts.js"></script>

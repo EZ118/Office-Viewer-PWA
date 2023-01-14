@@ -1,0 +1,42 @@
+{
+  "name": "ToDo PWA",
+  "short_name": "To Do",
+  "descriptions": "Make Todo Lists",
+  "start_url": "./",
+  "background_color": "#323639",
+  "display": "standalone",
+  "theme_color": "#2564cf",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "type": "image/png"
+    }
+  ],
+  "display_override": ["window-controls-overlay"],
+  
+  "shortcuts" : [
+    {
+      "name": "Open Saved Files",
+      "url": "./#OD",
+      "description": "Open A Saved Todo-list File",
+      "icons": [{ "src": "./icon.png", "sizes": "256x256" }]
+    },
+    {
+      "name": "Open In Browser",
+      "url": "./#OIB",
+      "description": "Start This App In Your Browser Tab",
+      "icons": [{ "src": "./icon.png", "sizes": "256x256" }]
+    }
+  ],
+  
+  "file_handlers": [
+    {
+      "action": "./",
+      "accept": {
+        "text/*": [
+          ".docx"
+        ]
+      }
+    }
+  ]
+}

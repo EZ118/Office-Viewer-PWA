@@ -1,48 +1,16 @@
 OneDrag = document.getElementById("OneDrag");
 Container = document.getElementById("container");
 WebTitle = document.getElementsByTagName("title")[0];
-UploadBtn = document.getElementById("SelectFileBtn");
 
 /*
- *  pptxjs Function
+ *	Operating Panel
  */
-
-$("#container").pptxToHtml({
-	pptxFileUrl: "",
-	fileInputId: "SelectFileBtn",
-	slideMode: false,
-	slidesScale: "50%",
-	keyBoardShortCut: false 
-});
-
-
-/*
- *  File Drop To Upload API
- */
-
-OneDrag.ondragover = function(e) {
-	//拖拽文件未释放
-	e.preventDefault();
-	OneDrag.setAttribute("style", "background:rgba(200, 200, 200, 0.5);");
-}
-
-OneDrag.ondrop = function(e) {
-	//拖拽文件并释放
-	e.preventDefault();
-	OneDrag.setAttribute("style", "background:rgba(200, 200, 200, 0.0);");
+var con_l = document.getElementById("container_l");
+con_l.onclick = function() {
 	
-	WebTitle.innerText = "演示文稿 - " + e.dataTransfer.files[0].name;
-	
-	UploadBtn.files = e.dataTransfer.files;
-	var evt = document.createEvent("HTMLEvents");
-	evt.initEvent("change", false, true);
-	UploadBtn.dispatchEvent(evt);
 }
+LOLItem
 
-OneDrag.ondragleave = function () {
-	//拖拽文件后未释放，同时离开检测区
-	OneDrag.setAttribute("style", "background:rgba(200, 200, 200, 0.0);");
-}
 
 /*
  *  Windows File Handling API
@@ -53,12 +21,7 @@ if ('launchQueue' in window) {
 		if (launchParams.files.length) {
 			const fileHandles = launchParams.files;
 			fileHandles.map(handle => console.log(handle.name));
-			//docx2h5(launchParams);
-			
-			UploadBtn.files = launchParams.files;
-			var evt = document.createEvent("HTMLEvents");
-			evt.initEvent("change", false, true);
-			UploadBtn.dispatchEvent(evt);
+			ReadSave(launchParams);
 		}
 	});
 }
@@ -89,7 +52,6 @@ window.onload = function() {
 /*
  *  Print&Close
  */
-
 function closeWin() { window.opener=null;window.close(); }
 function doPrint() {
 	document.getElementById("TBMB").style.display="none";

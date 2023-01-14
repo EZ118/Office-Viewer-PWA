@@ -3,30 +3,30 @@ body{
 }
 
 /*标题栏*/
-.TitleBar{ position:fixed; top:0px; left:0px; z-index:19997; width:100%; height:40px; padding:5px; 
+.TitleBar{ position:fixed; top:0px; left:0px; z-index:99997; width:100%; height:40px; padding:5px; 
 	background:#c43e1c; color:#FFF; box-shadow:0px 1px 5px #000; user-select:none;}
 
-.TitleBarIcon{ position:fixed; left:5px; top:5px; width:30px; z-index:19998; user-select:none; }
+.TitleBarIcon{ position:fixed; left:5px; top:5px; width:30px; z-index:99998; user-select:none; }
 /*更多按钮*/
 .TitleBarMenuBtn{
-	position:fixed; right:0px; top:0px; z-index:19999;
-	width:40px; height:40px; 
-	background:#c43e1c; border:2px solid rgba(200, 200, 200, 0.3);
+	position:fixed; right:0px; top:0px; z-index:99999;
+	width:40px; height:40px; color:rgba(200, 200, 200, 0.8);
+	background:#c43e1c; border:2px solid #c43e1c;
 }
 .TitleBarMenuBtn:hover,
 .TitleBarMenuBtn:active{
 	background:#c55539;
-	border:2px solid #c16f5b;
+	border:2px solid rgba(200, 200, 200, 0.3);
 }
 .TitleBarMenuBody{
-	position:fixed; right:4px; top:45px; z-index:19999;
-	background:#c55539; padding:10px;
-	border:2px solid #c16f5b; border-radius:5px;
+	position:fixed; right:4px; top:45px; z-index:99999;
+	background:#c43e1c; padding:10px;
+	border:2px solid #c55539; border-radius:5px;
 }
 .TitleBarMenuBody div{ width:100%; color:#FFF; }
 
 /*===*/
-#OneDrag{ position:fixed; top:0px; left:0px; z-index:19998; width:100%; height:40px; }
+#OneDrag{ position:fixed; top:0px; left:0px; z-index:99998; width:100%; height:40px; }
 
 #container{
 	margin-bottom:20px; text-align:left;
